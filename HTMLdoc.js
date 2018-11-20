@@ -1,4 +1,13 @@
 window.onload=function (){
+  
+var pdfi = document.createElement('script');
+pdfi.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/pdf.js";
+document.getElementsByTagName('head')[0].appendChild(pdfi);
+
+var tessa = document.createElement('script');
+tessa.src = "https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/1.0.13/tesseract.min.js";
+document.getElementsByTagName('head')[0].appendChild(tessa);
+  
 var newdiv=document.createElement("div");
 newdiv.id="author"
 newdiv.setAttribute("style", "text-align:center");
