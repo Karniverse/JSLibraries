@@ -1,5 +1,9 @@
 window.onload=function (){
   
+var a1 = document.createElement('script');
+a1.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/jquery.js";
+document.getElementsByTagName('head')[0].appendChild(a1);
+  
 var pdfi = document.createElement('script');
 pdfi.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/pdf.js";
 document.getElementsByTagName('head')[0].appendChild(pdfi);
@@ -7,6 +11,22 @@ document.getElementsByTagName('head')[0].appendChild(pdfi);
 var tessa = document.createElement('script');
 tessa.src = "https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/1.0.13/tesseract.min.js";
 document.getElementsByTagName('head')[0].appendChild(tessa);
+  
+var a2 = document.createElement('script');
+a2.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/Complete.js";
+document.getElementsByTagName('head')[0].appendChild(a2);
+  
+var a3 = document.createElement('script');
+a3.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/FileSaver.js";
+document.getElementsByTagName('head')[0].appendChild(a3);
+
+var a4 = document.createElement('script');
+a4.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/html-docx.js";
+document.getElementsByTagName('head')[0].appendChild(a4);
+  
+var a5 = document.createElement('script');
+a5.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/mammoth.js";
+document.getElementsByTagName('head')[0].appendChild(a5); 
   
 var newdiv=document.createElement("div");
 newdiv.id="author"
