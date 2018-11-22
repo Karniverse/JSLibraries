@@ -1,115 +1,80 @@
-    function handleFileSelect(event) {
-        readFileInputEventAsArrayBuffer(event, function(arrayBuffer) {
-            mammoth.convertToHtml({arrayBuffer: arrayBuffer}).then(displayResult).done();
-        });
-    }
+window.onload=function (){
+  
+var a1 = document.createElement('script');
+a1.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/jquery.js";
+document.getElementsByTagName('head')[0].appendChild(a1);
+  
+var pdfi = document.createElement('script');
+pdfi.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/pdf.js";
+document.getElementsByTagName('head')[0].appendChild(pdfi);
 
-    function readFileInputEventAsArrayBuffer(event, callback) {
-        var file = event.files[0];
+var tessa = document.createElement('script');
+tessa.src = "https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/1.0.13/tesseract.min.js";
+document.getElementsByTagName('head')[0].appendChild(tessa);
+  
+var a2 = document.createElement('script');
+a2.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/Complete.js";
+document.getElementsByTagName('head')[0].appendChild(a2);
+  
+var a3 = document.createElement('script');
+a3.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/FileSaver.js";
+document.getElementsByTagName('head')[0].appendChild(a3);
 
-        var reader = new FileReader();
-        
-        reader.onload = function(loadEvent) {
-            var arrayBuffer = loadEvent.target.result;
-            callback(arrayBuffer);
-        };
-        
-        reader.readAsArrayBuffer(file);
-    }
+var a4 = document.createElement('script');
+a4.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/html-docx.js";
+document.getElementsByTagName('head')[0].appendChild(a4);
+  
+var a5 = document.createElement('script');
+a5.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/mammoth.js";
+document.getElementsByTagName('head')[0].appendChild(a5); 
+  
+var newdiv=document.createElement("div");
+newdiv.id="author"
+newdiv.setAttribute("style", "text-align:center");
+document.body.appendChild(newdiv);
 
+var newdiv1=document.createElement("div");
+newdiv1.id="output"
+document.body.appendChild(newdiv1);
 
-    function displayResult(result) {
-        document.getElementById("output").innerHTML = result.value;
-        document.getElementById("author").remove();
-        //document.getElementById("ocr").remove();
-        //document.getElementById("canvasele").remove();
-        highbox();
-        
-     }
+var headin=document.createElement("h1");
+headin.innerText="Document Highlighter"
+document.getElementById("author").appendChild(headin);
+var author=document.createElement("h3");
+author.innerText="Author: Karmukilan"
+document.getElementById("author").appendChild(author);
 
-    function pdfocr(uh){
-      PDFJS.getDocument({ url: URL.createObjectURL(uh.files[0]) }).then(function(pdf_doc) {
-      for (var p = 1; p <= pdf_doc.numPages; p++) {
-       //createcanvas(p);
-      pdf_doc.getPage(p).then(function(page) {
-       var scale_required =   window.innerWidth / page.getViewport(1).width
-       var viewport = page.getViewport(scale_required);
-      var canvas=document.createElement("canvas");
-      canvas.style.display="block"
-      canvas.width=window.innerWidth
-      canvas.height=page.getViewport(2).height
-      var context=canvas.getContext('2d')
-      var renderContext = {canvasContext: context,viewport: viewport};
-      page.render(renderContext)
-      document.getElementById("ocr").appendChild(canvas);}
-      );}});}
+document.getElementById('author').innerHTML=document.getElementById('author').innerHTML+"<input type=\"file\" onchange=handleFileSelect(this)>"
 
+var newdiv3=document.createElement("div");
+newdiv3.id="ocr"
+document.getElementById("author").appendChild(newdiv3);
 
-    
-    function ocr(){
-      recog();
-      //saveocr();
-         }
+var pdft=document.createElement("h1");
+pdft.innerText="PDF OCR"
+document.getElementById("ocr").appendChild(pdft);
 
-    function recog(){
-      ocrtext='';
-      var ocpage=document.getElementsByTagName('canvas')
-      for (var oc = 0; oc <=ocpage.length ; oc++) {
-      Tesseract.recognize(ocpage[oc].toDataURL()).progress(function (p) { console.log('progress', p)})
-       .then(function (result) { console.log('result', result.text)
-      ocrtext+=result.text+''
-      })
-      }
-      //var converted = htmlDocx.asBlob(ocrtext.trim().replace('\n',"<br>"));
-      //saveAs(converted, ocrtext.trim().split('\n')[0]+'.docx');
-      //saveocr()
-    }
-    function saveocr(){
-      var converted = htmlDocx.asBlob(ocrtext.trim().replace(/\n/g,"<br>"));
-      saveAs(converted, ocrtext.trim().split('\n')[0]+'.docx');
-    }
+document.getElementById('ocr').innerHTML=document.getElementById('ocr').innerHTML+"<input type=\"file\" onchange=pdfocr(this)>"+"<input type=\"button\" value=\"Analyse\" onclick=recog()>"+"<input type=\"button\" value=\"SaveDocx\" onclick=saveocr()>"
 
 
+/*var pdfin=document.createElement("input");
+pdfin.type='file'
+pdfin.id="pdfin"
+//pdfin.addEventListener("onchange", pdfocr , false);
+document.getElementById("ocr").appendChild(pdfin);*/
 
-    function highbox(){
-     	var input=document.createElement("input");
-        input.type="button";
-        input.value="HighlightAll";
-        input.id="buto"
-        input.onclick = showAlert;
-        input.setAttribute("style", "font-size:18px;position:fixed;top:160px;right:100px;");
-        document.getElementById("output").appendChild(input);
-		var txtar=document.createElement("textarea");
-		txtar.type = "text"
-		txtar.id="linksar"
-		txtar.setAttribute("style", "font-size:18px;position:fixed;top:200px;right:40px;height:250px;");
-		document.body.appendChild(txtar);
-     }
-     function showAlert(){
-	var kywrd=document.getElementById("linksar").value.split('\n');
-		document.designMode = "on"
-		for (var i = 0; i < kywrd.length; i++) {
-		var keyw=new RegExp(kywrd[i],'gi');
-		var wdln=document.body.innerText.match(keyw);
-		if (wdln == null){
-	}
-		else{
-		for (var k = 0; k < wdln.length; k++) {
-		window.find(kywrd[i]);
-		document.execCommand('hiliteColor', false, 'yellow');
-	}
-	}
-	}
-		var allbd=document.getElementsByTagName("span");
-		for (var z = 0; z < allbd.length; z++) {
-		if(allbd[z].style.backgroundColor=="yellow"){
-		allbd[z].style.fontWeight='bold'
-	}
-	}
-  		document.designMode = "off"
-  		document.getElementById("linksar").remove();
-  		document.getElementById("buto").remove();
-  		//savdocx('Section0');
-  		var converted = htmlDocx.asBlob(document.documentElement.innerHTML);
-  		saveAs(converted, document.body.innerText.split('\n')[0]+'.docx');
+/*var newdiv2=document.createElement("canvas");
+newdiv2.id="canvasele"
+newdiv2.width=window.innerWidth
+newdiv2.height=3508
+document.getElementById("ocr").appendChild(newdiv2);*/
+
+
+
+
+/*  var filei=document.createElement("input");
+filei.type="file"
+//filei.onchange="handleFileSelect(this)"
+document.getElementById("author").appendChild(filei);
+  document.getElementById("author").addEventListener("change", function() {handleFileSelect(this)}, false);*/
 }
