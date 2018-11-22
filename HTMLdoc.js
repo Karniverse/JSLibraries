@@ -44,7 +44,34 @@ var author=document.createElement("h3");
 author.innerText="Author: Karmukilan"
 document.getElementById("author").appendChild(author);
 
-  document.getElementById('author').innerHTML=document.getElementById('author').innerHTML+"<input type=\"file\" onchange=handleFileSelect(this)>"
+document.getElementById('author').innerHTML=document.getElementById('author').innerHTML+"<input type=\"file\" onchange=handleFileSelect(this)>"
+
+var newdiv3=document.createElement("div");
+newdiv3.id="ocr"
+document.getElementById("author").appendChild(newdiv3);
+
+var pdft=document.createElement("h1");
+pdft.innerText="PDF OCR"
+document.getElementById("ocr").appendChild(pdft);
+
+document.getElementById('ocr').innerHTML=document.getElementById('ocr').innerHTML+"<input type=\"file\" onchange=pdfocr(this)>"+"<input type=\"button\" value=\"Analyse\" onclick=recog()>"+"<input type=\"button\" value=\"SaveDocx\" onclick=saveocr()>"
+
+
+/*var pdfin=document.createElement("input");
+pdfin.type='file'
+pdfin.id="pdfin"
+//pdfin.addEventListener("onchange", pdfocr , false);
+document.getElementById("ocr").appendChild(pdfin);*/
+
+/*var newdiv2=document.createElement("canvas");
+newdiv2.id="canvasele"
+newdiv2.width=window.innerWidth
+newdiv2.height=3508
+document.getElementById("ocr").appendChild(newdiv2);*/
+
+
+
+
 /*  var filei=document.createElement("input");
 filei.type="file"
 //filei.onchange="handleFileSelect(this)"
