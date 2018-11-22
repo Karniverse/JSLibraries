@@ -20,12 +20,58 @@
 
     function displayResult(result) {
         document.getElementById("output").innerHTML = result.value;
-        //document.getElementById("savit").remove();
         document.getElementById("author").remove();
+        //document.getElementById("ocr").remove();
+        //document.getElementById("canvasele").remove();
         highbox();
         
      }
-     function highbox(){
+
+    function pdfocr(uh){
+      PDFJS.getDocument({ url: URL.createObjectURL(uh.files[0]) }).then(function(pdf_doc) {
+      for (var p = 1; p <= pdf_doc.numPages; p++) {
+       //createcanvas(p);
+      pdf_doc.getPage(p).then(function(page) {
+       var scale_required =   window.innerWidth / page.getViewport(1).width
+       var viewport = page.getViewport(scale_required);
+      var canvas=document.createElement("canvas");
+      canvas.style.display="block"
+      canvas.width=window.innerWidth
+      canvas.height=page.getViewport(2).height
+      var context=canvas.getContext('2d')
+      var renderContext = {canvasContext: context,viewport: viewport};
+      page.render(renderContext)
+      document.getElementById("ocr").appendChild(canvas);}
+      );}});}
+
+
+    
+    function ocr(){
+      recog();
+      //saveocr();
+         }
+
+    function recog(){
+      ocrtext='';
+      var ocpage=document.getElementsByTagName('canvas')
+      for (var oc = 0; oc <=ocpage.length ; oc++) {
+      Tesseract.recognize(ocpage[oc].toDataURL()).progress(function (p) { console.log('progress', p)})
+       .then(function (result) { console.log('result', result.text)
+      ocrtext+=result.text+''
+      })
+      }
+      //var converted = htmlDocx.asBlob(ocrtext.trim().replace('\n',"<br>"));
+      //saveAs(converted, ocrtext.trim().split('\n')[0]+'.docx');
+      //saveocr()
+    }
+    function saveocr(){
+      var converted = htmlDocx.asBlob(ocrtext.trim().replace(/\n/g,"<br>"));
+      saveAs(converted, ocrtext.trim().split('\n')[0]+'.docx');
+    }
+
+
+
+    function highbox(){
      	var input=document.createElement("input");
         input.type="button";
         input.value="HighlightAll";
