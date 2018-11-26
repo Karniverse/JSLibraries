@@ -37,7 +37,7 @@
       var canvas=document.createElement("canvas");
       canvas.style.display="block"
       canvas.width=window.innerWidth
-      canvas.height=page.getViewport(2).height
+      canvas.height=page.getViewport(3).height
       var context=canvas.getContext('2d')
       var renderContext = {canvasContext: context,viewport: viewport};
       page.render(renderContext)
