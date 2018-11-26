@@ -58,7 +58,7 @@
       Tesseract.recognize(ocpage[oc].toDataURL()).progress(function (p) { console.log('progress', p)
         document.getElementsByTagName('input')[2].value=(p.progress*100).toFixed(2)+'%'})
        .then(function (result) { console.log('result', result.text)
-      ocrtext+=result.text+''
+      ocrtext+=result.text.trim()+''
       })
       }
       //var converted = htmlDocx.asBlob(ocrtext.trim().replace('\n',"<br>"));
