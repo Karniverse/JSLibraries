@@ -66,7 +66,7 @@
       //saveocr()
     }
     function saveocr(){
-      var converted = htmlDocx.asBlob(ocrtext.trim().replace(/\n/g,"<br>"));
+      var converted = htmlDocx.asBlob("<head><meta charset=\"UTF-8\"></head>"+ocrtext.trim().replace(/\n/g,"<br>"));
       saveAs(converted, ocrtext.trim().split('\n')[0]+'.docx');
     }
 
