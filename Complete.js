@@ -66,7 +66,7 @@
       //saveocr()
     }
     function saveocr(){
-      ocrtext=ocrtext.replace(/Note: This is a converted Word document. An image of the resume is displayed rather than text./g,'') 
+      ocrtext=ocrtext.replace(/Note: This is a converted Word document. An image of the resume is displayed rather than text./g,'').replace(/Note: This is a converted Word document, An image of the resume is displayed rather than text./g,'')  
       var converted = htmlDocx.asBlob("<head><meta charset=\"UTF-8\"></head>"+ocrtext.trim().replace(/\n/g,"<br>"));
       saveAs(converted, ocrtext.trim().split('\n')[0]+'.docx');
     }
