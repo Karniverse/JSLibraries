@@ -78,3 +78,11 @@ filei.type="file"
 document.getElementById("author").appendChild(filei);
   document.getElementById("author").addEventListener("change", function() {handleFileSelect(this)}, false);*/
 }
+
+/*references
+http://usefulangle.com/post/20/pdfjs-tutorial-1-preview-pdf-during-upload-wih-next-prev-buttons
+http://usefulangle.com/post/24/pdf-to-jpeg-png-with-pdfjs
+https://github.com/naptha/tesseract.js#tesseractjs
+
+*/
+
