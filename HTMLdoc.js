@@ -83,6 +83,7 @@ document.getElementById("author").appendChild(filei);
 http://usefulangle.com/post/20/pdfjs-tutorial-1-preview-pdf-during-upload-wih-next-prev-buttons
 http://usefulangle.com/post/24/pdf-to-jpeg-png-with-pdfjs
 https://github.com/naptha/tesseract.js#tesseractjs
+https://gist.github.com/dmnsgn/36b26dfcd7695d02de77f5342b0979c7
 
 */
 
