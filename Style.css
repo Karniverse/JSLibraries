@@ -1,4 +1,6 @@
 body {
-       background: black;
-       color: #80c0c0 
+background: #FFEAEA;
+background: -moz-linear-gradient(top, #FFEAEA 0%, #FFFFFF 50%, #FEF6FF 100%);
+background: -webkit-linear-gradient(top, #FFEAEA 0%, #FFFFFF 50%, #FEF6FF 100%);
+background: linear-gradient(to bottom, #FFEAEA 0%, #FFFFFF 50%, #FEF6FF 100%);
 }
