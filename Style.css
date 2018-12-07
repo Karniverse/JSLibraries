@@ -5,14 +5,14 @@
 }
 
 input[type=file] {
-    padding:5px;
+    padding:2px;
     border:2px solid #ccc;
     -webkit-border-radius: 5px;
     border-radius: 8px;
     border-color: black
 }
 input[type=button] {
-    padding:5px;
+    padding:4px;
     border:2px solid #ccc;
     -webkit-border-radius: 5px;
     border-radius: 8px;
