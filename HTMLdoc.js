@@ -28,6 +28,10 @@ var a5 = document.createElement('script');
 a5.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/mammoth.js";
 document.getElementsByTagName('head')[0].appendChild(a5); 
   
+var a5 = document.createElement('script');
+a5.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/Snow.js";
+document.getElementsByTagName('head')[0].appendChild(a5); 
+  
 var sty = document.createElement('link');
 sty.rel="stylesheet"
 sty.type="text/css"
