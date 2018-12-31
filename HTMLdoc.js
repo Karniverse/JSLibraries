@@ -21,11 +21,11 @@ a3.src = "FileSaver.js";
 document.getElementsByTagName('head')[0].appendChild(a3);
 
 var a4 = document.createElement('script');
-a4.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/html-docx.js";
+a4.src = "html-docx.js";
 document.getElementsByTagName('head')[0].appendChild(a4);
   
 var a5 = document.createElement('script');
-a5.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/mammoth.js";
+a5.src = "mammoth.js";
 document.getElementsByTagName('head')[0].appendChild(a5); 
   
 var a6 = document.createElement('script');
