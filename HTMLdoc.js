@@ -43,6 +43,11 @@ document.getElementsByTagName('head')[0].appendChild(a8);
 var a9 = document.createElement('script');
 a9.src = "textillate.js";
 document.getElementsByTagName('head')[0].appendChild(a9);
+
+var a10 = document.createElement('script');
+a10.src = "typewriting.js";
+document.getElementsByTagName('head')[0].appendChild(a10);  
+  
   
   
 var sty = document.createElement('link');
