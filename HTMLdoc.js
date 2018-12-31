@@ -39,7 +39,7 @@ document.getElementsByTagName('head')[0].appendChild(a7);
 var sty = document.createElement('link');
 sty.rel="stylesheet"
 sty.type="text/css"
-sty.href = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/Style.css";
+sty.href = "Style.css";
 document.getElementsByTagName('head')[0].appendChild(sty);
   
 var newdiv=document.createElement("div");
