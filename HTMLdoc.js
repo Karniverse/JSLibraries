@@ -65,7 +65,7 @@ headin.innerText="Document Highlighter"
 document.getElementById("author").appendChild(headin);
 var author=document.createElement("h3");
 author.innerText="This page is developed and maintained by Karmukilan"
-author.class="txtwav vibe"
+author.class="tlt"
 document.getElementById("author").appendChild(author);
 
 document.getElementById('author').innerHTML=document.getElementById('author').innerHTML+"<input type=\"file\" onchange=handleFileSelect(this)>"
