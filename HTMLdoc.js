@@ -17,7 +17,7 @@ a2.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/Complete.js
 document.getElementsByTagName('head')[0].appendChild(a2);
   
 var a3 = document.createElement('script');
-a3.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/FileSaver.js";
+a3.src = "FileSaver.js";
 document.getElementsByTagName('head')[0].appendChild(a3);
 
 var a4 = document.createElement('script');
@@ -35,6 +35,11 @@ document.getElementsByTagName('head')[0].appendChild(a6);
 var a7 = document.createElement('script');
 a7.src = "anime.js";
 document.getElementsByTagName('head')[0].appendChild(a7); 
+
+var a8 = document.createElement('script');
+a8.src = "TextWave.js";
+document.getElementsByTagName('head')[0].appendChild(a8);   
+  
   
 var sty = document.createElement('link');
 sty.rel="stylesheet"
