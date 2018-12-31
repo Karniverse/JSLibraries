@@ -85,7 +85,13 @@ document.getElementById("ocr").appendChild(pdft);
 
 document.getElementById('ocr').innerHTML=document.getElementById('ocr').innerHTML+"<input type=\"file\" onchange=pdfocr(this)>"+"<input type=\"button\" value=\"Analyse\" onclick=recog()>"+"<input type=\"button\" value=\"SaveDocx\" onclick=saveocr()>"
 
-
+var typeWriting = new TypeWriting({
+    targetElement   : document.getElementsByTagName('h3')[0],
+    inputString     : 'This page is developed and maintained by Karmukilan',
+    typing_interval : 130, // Interval between each character
+    blink_interval  : '0.8s', // Interval of the cursor blinks
+    cursor_color    : '#00fd55', // Color of the cursor
+    });
 /*var pdfin=document.createElement("input");
 pdfin.type='file'
 pdfin.id="pdfin"
