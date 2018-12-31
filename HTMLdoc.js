@@ -5,7 +5,7 @@ a1.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/jquery.js";
 document.getElementsByTagName('head')[0].appendChild(a1);
   
 var pdfi = document.createElement('script');
-pdfi.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/pdf.js";
+pdfi.src = "pdf.js";
 document.getElementsByTagName('head')[0].appendChild(pdfi);
 
 var tessa = document.createElement('script');
@@ -13,7 +13,7 @@ tessa.src = "https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/1.0.13/tesserac
 document.getElementsByTagName('head')[0].appendChild(tessa);
   
 var a2 = document.createElement('script');
-a2.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/Complete.js";
+a2.src = "Complete.js";
 document.getElementsByTagName('head')[0].appendChild(a2);
   
 var a3 = document.createElement('script');
