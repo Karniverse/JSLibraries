@@ -32,6 +32,10 @@ var a6 = document.createElement('script');
 a6.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/Snow.js";
 document.getElementsByTagName('head')[0].appendChild(a6); 
   
+var a7 = document.createElement('script');
+a7.src = "anime.js";
+document.getElementsByTagName('head')[0].appendChild(a7); 
+  
 var sty = document.createElement('link');
 sty.rel="stylesheet"
 sty.type="text/css"
