@@ -40,6 +40,10 @@ var a8 = document.createElement('script');
 a8.src = "TextWave.js";
 document.getElementsByTagName('head')[0].appendChild(a8);   
   
+var a9 = document.createElement('script');
+a9.src = "textillate.js";
+document.getElementsByTagName('head')[0].appendChild(a9);
+  
   
 var sty = document.createElement('link');
 sty.rel="stylesheet"
