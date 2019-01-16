@@ -28,9 +28,9 @@ var a5 = document.createElement('script');
 a5.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/mammoth.js";
 document.getElementsByTagName('head')[0].appendChild(a5); 
   
-var a6 = document.createElement('script');
+/*var a6 = document.createElement('script');
 a6.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/Snow.js";
-document.getElementsByTagName('head')[0].appendChild(a6); 
+document.getElementsByTagName('head')[0].appendChild(a6); */
   
 var a7 = document.createElement('script');
 a7.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/anime.js";
