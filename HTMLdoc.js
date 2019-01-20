@@ -30,7 +30,7 @@ document.getElementsByTagName('head')[0].appendChild(a5);
   
 /*var a6 = document.createElement('script');
 a6.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/Snow.js";
-document.getElementsByTagName('head')[0].appendChild(a6); */
+document.getElementsByTagName('head')[0].appendChild(a6); 
   
 var a7 = document.createElement('script');
 a7.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/anime.js";
@@ -38,10 +38,10 @@ document.getElementsByTagName('head')[0].appendChild(a7);
 
 var a8 = document.createElement('script');
 a8.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/TextWave.js";
-document.getElementsByTagName('head')[0].appendChild(a8);   
+document.getElementsByTagName('head')[0].appendChild(a8);   */
   
 var a9 = document.createElement('script');
-a9.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/textillate.js";
+a9.src = "https://cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js";
 document.getElementsByTagName('head')[0].appendChild(a9);
 
 var a10 = document.createElement('script');
