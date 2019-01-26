@@ -1,8 +1,8 @@
 window.onload=function (){
   
 var a1 = document.createElement('script');
-//a1.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/jquery.js";
-a1.src = "https://code.jquery.com/jquery-3.3.1.min.js"
+a1.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/jquery.js";
+//a1.src = "https://code.jquery.com/jquery-3.3.1.min.js"
 document.getElementsByTagName('head')[0].appendChild(a1);
   
 var pdfi = document.createElement('script');
@@ -50,8 +50,8 @@ a10.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/typewritin
 document.getElementsByTagName('head')[0].appendChild(a10);
   
   
-var sp = document.createElement('span');
-document.getElementById('author').insertBefore(sp, document.getElementById('author').firstChild);
+//var sp = document.createElement('span');
+//document.getElementById('author').insertBefore(sp, document.getElementById('author').firstChild);
   
   
   
