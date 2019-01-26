@@ -127,3 +127,14 @@ https://gist.github.com/dmnsgn/36b26dfcd7695d02de77f5342b0979c7
 
 */
 
+
+/*var pattern = Trianglify({
+                width: window.innerWidth,
+                height: window.innerHeight
+        });
+
+document.getElementById('author').style.background = 'url(' + pattern.canvas().toDataURL() + ')';
+
+https://coderwall.com/p/_ac7oa/set-canvas-as-body-background
+*/
+
