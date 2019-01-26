@@ -1,7 +1,8 @@
 window.onload=function (){
   
 var a1 = document.createElement('script');
-a1.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/jquery.js";
+//a1.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/jquery.js";
+a1.src = "https://code.jquery.com/jquery-3.3.1.min.js"
 document.getElementsByTagName('head')[0].appendChild(a1);
   
 var pdfi = document.createElement('script');
