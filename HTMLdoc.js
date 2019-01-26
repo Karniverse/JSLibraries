@@ -97,6 +97,14 @@ var typeWriting = new TypeWriting({
     blink_interval  : '0.8s', // Interval of the cursor blinks
     cursor_color    : '#00fd55', // Color of the cursor
     });
+  
+var pattern = Trianglify({
+                width: window.innerWidth,
+                height: window.innerHeight
+        });
+
+document.getElementById('author').style.background = 'url(' + pattern.canvas().toDataURL() + ')';  
+  
 /*var pdfin=document.createElement("input");
 pdfin.type='file'
 pdfin.id="pdfin"
