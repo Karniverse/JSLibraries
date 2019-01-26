@@ -90,6 +90,14 @@ document.getElementById("ocr").appendChild(pdft);
 
 document.getElementById('ocr').innerHTML=document.getElementById('ocr').innerHTML+"<input type=\"file\" onchange=pdfocr(this)>"+"<input type=\"button\" value=\"Analyse\" onclick=recog()>"+"<input type=\"button\" value=\"SaveDocx\" onclick=saveocr()>"
 
+  
+var pattern = Trianglify({
+                width: window.innerWidth,
+                height: window.innerHeight
+        });
+
+document.getElementById('author').style.background = 'url(' + pattern.canvas().toDataURL() + ')';    
+  
 var typeWriting = new TypeWriting({
     targetElement   : document.getElementsByTagName('h3')[0],
     inputString     : 'This page is developed and maintained by Karmukilan',
@@ -98,12 +106,7 @@ var typeWriting = new TypeWriting({
     cursor_color    : '#00fd55', // Color of the cursor
     });
   
-var pattern = Trianglify({
-                width: window.innerWidth,
-                height: window.innerHeight
-        });
 
-document.getElementById('author').style.background = 'url(' + pattern.canvas().toDataURL() + ')';  
   
 /*var pdfin=document.createElement("input");
 pdfin.type='file'
