@@ -46,7 +46,11 @@ document.getElementsByTagName('head')[0].appendChild(a9);
 
 var a10 = document.createElement('script');
 a10.src = "https://raw.githack.com/mukil-bluerider/JSLibraries/master/typewriting.js";
-document.getElementsByTagName('head')[0].appendChild(a10);  
+document.getElementsByTagName('head')[0].appendChild(a10);
+  
+  
+var sp = document.createElement('span');
+document.getElementById('author').insertBefore(sp, document.getElementById('author').firstChild);
   
   
   
