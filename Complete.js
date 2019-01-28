@@ -52,6 +52,7 @@
          }
 
     function recog(){
+	    document.getElementsByTagName('h3')[0].remove();
       ocrtext='';
       var ocpage=document.getElementsByTagName('canvas')
       for (var oc = 0; oc <=ocpage.length ; oc++) {
