@@ -116,3 +116,12 @@
   		var converted = htmlDocx.asBlob(document.documentElement.innerHTML);
   		saveAs(converted, document.body.innerText.split('\n')[0]+'.docx');
 }
+
+function Backg(){
+var pattern = Trianglify({
+                width: window.innerWidth,
+                height: window.innerHeight
+        });
+
+document.getElementById('author').style.background = 'url(' + pattern.canvas().toDataURL() + ')'; 
+}
