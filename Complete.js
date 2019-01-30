@@ -126,4 +126,4 @@ var pattern = Trianglify({
 document.getElementById('author').style.background = 'url(' + pattern.canvas().toDataURL() + ')'; 
 }
 
-setTimeout(Backg, 3000);
+setTimeout(Backg, 1000);
