@@ -127,3 +127,12 @@ document.getElementById('author').style.background = 'url(' + pattern.canvas().t
 }
 
 setTimeout(Backg, 1000);
+
+function foote(){var typeWriting = new TypeWriting({
+    targetElement   : document.getElementsByTagName('h3')[0],
+    inputString     : 'This page is developed and maintained by Karmukilan',
+    typing_interval : 130, // Interval between each character
+    blink_interval  : '0.8s', // Interval of the cursor blinks
+    cursor_color    : '#00fd55', // Color of the cursor
+    });}
+foote();
