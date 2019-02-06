@@ -117,7 +117,7 @@
   		saveAs(converted, document.body.innerText.split('\n')[0]+'.docx');
 }
 
-function Backg(){
+/*function Backg(){
 var pattern = Trianglify({
                 width: window.innerWidth,
                 height: window.innerHeight
@@ -197,5 +197,5 @@ var color2 = "rgb("+r2+","+g2+","+b2+")";
   }
 }
 
-setInterval(updateGradient,10);
+setInterval(updateGradient,10);*/
 
