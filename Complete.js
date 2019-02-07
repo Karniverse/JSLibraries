@@ -88,7 +88,7 @@
 		txtar.setAttribute("style", "font-size:18px;position:fixed;top:200px;right:40px;height:250px;");
 		document.body.appendChild(txtar);
      }
-     function showAlert(){
+     /*function showAlert(){
 	var kywrd=document.getElementById("linksar").value.split('\n');
 		document.designMode = "on"
 		for (var i = 0; i < kywrd.length; i++) {
@@ -116,6 +116,30 @@
   		var converted = htmlDocx.asBlob(document.documentElement.innerHTML);
   		saveAs(converted, document.body.innerText.split('\n')[0]+'.docx');
 }
+*/
+
+function showAlert(){
+     kywrd=document.getElementById("linksar").value.split('\n');
+    for (i = 0; i < kywrd.length; i++) {
+
+      $("body").mark(kywrd[i], {
+        "element": "span"
+      });
+      //$("body").mark(kywrd[i]);
+  }
+    var allbd=document.getElementsByTagName("span");
+    for (var z = 0; z < allbd.length; z++) {
+    allbd[z].style.fontWeight='bold'
+    allbd[z].style.backgroundColor="yellow"
+
+}
+      document.getElementById("linksar").remove();
+      document.getElementById("buto").remove();
+      var converted = htmlDocx.asBlob(document.documentElement.innerHTML);
+      saveAs(converted, document.body.innerText.split('\n')[0]+'.docx');
+
+}
+
 
 /*function Backg(){
 var pattern = Trianglify({
