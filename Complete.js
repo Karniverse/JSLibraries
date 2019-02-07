@@ -131,6 +131,7 @@ function showAlert(){
     for (var z = 0; z < allbd.length; z++) {
     allbd[z].style.fontWeight='bold'
     allbd[z].style.backgroundColor="yellow"
+    allbd[z].removeAttribute("data-markjs");
 
 }
       document.getElementById("linksar").remove();
