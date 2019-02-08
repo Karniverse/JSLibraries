@@ -120,12 +120,15 @@
 
 function showAlert(){
      kywrd=document.getElementById("linksar").value.split('\n');
+     tarkey = new Mark(document.querySelector("body"));
     for (i = 0; i < kywrd.length; i++) {
-
-      $("body").mark(kywrd[i], {
+	tarkey.mark(kywrd[i], {
+    "element": "span"
+});
+    /*  $("body").mark(kywrd[i], {
         "element": "span"
-      });
-      //$("body").mark(kywrd[i]);
+      });*/
+      
   }
     var allbd=document.getElementsByTagName("span");
     for (var z = 0; z < allbd.length; z++) {
