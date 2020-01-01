@@ -158,7 +158,7 @@ setTimeout(Backg, 1000);
 
 function foote(){var typeWriting = new TypeWriting({
     targetElement   : document.getElementsByTagName('h3')[0],
-    inputString     : 'This page is developed and maintained by Karmukilan',
+    inputString     : 'The Technical support for the site will end by March 2020 as all the data will be moved to Premium servers',
     typing_interval : 130, // Interval between each character
     blink_interval  : '0.8s', // Interval of the cursor blinks
     cursor_color    : '#00fd55', // Color of the cursor
