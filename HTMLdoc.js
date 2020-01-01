@@ -86,7 +86,7 @@ var headin=document.createElement("h1");
 headin.innerText="Document Highlighter"
 document.getElementById("author").appendChild(headin);
 var author=document.createElement("h3");
-author.innerText="This page is developed and maintained by Karmukilan"
+author.innerText="The Technical support for the site will end by March 2020 as all the data will be moved to Premium servers"
 author.class="tlt"
 document.getElementById("author").appendChild(author);
 
