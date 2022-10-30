@@ -3,7 +3,7 @@
 <head>
  <Script>
   window.addEventListener('message', event => {
-  if (event.origin.startsWith('http://your-first-site.com')) { //check the origin of the data!
+  if (event.origin.startsWith('app.ezlynx.com')) { //check the origin of the data!
     // The data was sent from your site. It sent with postMessage is stored in event.data:
     console.log(event.data);
   } else {
